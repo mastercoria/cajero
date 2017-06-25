@@ -1,0 +1,43 @@
+<html>
+	<!-- Este código se descargó de los servidores de MasterCoria.com, puedes modificarlo y distribuirlo libremente. -->
+	<head>
+		<meta charset="utf-8" />
+		<title>Cajero automático por Christopher Coria</title>
+		<style type="text/css">
+			#seccion-general{
+				position:relative;
+			}
+			#contenedor-izquierda{
+				position: relative; width: 50%; top: 0; left: 0; float: left; height: 200px;
+			}
+			img{
+			    position:absolute; padding-left: 27%;  
+			}
+			#contenedor-derecha{
+ 				position: relative; width: 50%; top: 0; right: 0; float: right; height: 200px; 
+			}
+		</style>
+	</head>
+	<body>
+		<h1 style="text-align:center;">Cajero automático simple</h1><hr />
+
+		<!-- Separamos en 50%. -->
+		<section id="contenedor-general">
+			<div id="contenedor-inzquierda">
+				<img src="cajero-automatico.jpg" width="250px" height="250px" /><br />
+			</div>
+			<div id="contenedor-derecha">
+				<label>Dinero: </label><input type="text" placeholder="Introduzca la cantidad ..." id="dinero" />
+				<input type="submit" id="enviar" /><br /><br />
+
+				<!-- En donde el proframa imprimirá los resultados. -->
+				<div id="resultados">
+				<strong>Resultados:</strong><br /><br />
+
+				</div>
+				<br /><small>Facebook: Aprendamos Ingeniería.</small>
+			</div>
+		</section>
+		<script type="text/javascript" src="dinero.js"></script>
+	</body>
+</html>
