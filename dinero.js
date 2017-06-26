@@ -21,6 +21,7 @@ opcionesDinero contiene la configuración de dinero (monedas y billetes).
 opcionesCantidad contiene la configuración de cantidad de dinero en opcionesDinero. Es proporcional las dimenciones de ella.
 EJ: opcionesCantidad[0] contiene la cantidad de dinero de opcionesDinero[0], etc ...
 
+NOTA: Ambos vectores tienen que tener las mismas dimensiones con valores asignados. opcionesDinero[6] = opcionesCantidad[6].
 SE PUEDEN EDITAR.
 */
 var opcionesCantidad = [5,5,3,3,4,3,3];
@@ -35,7 +36,7 @@ do{
 	// Obtenemos la cantidad total de dinero y la asignamos a la variable "max".
 	max += opcionesDinero[i]*opcionesCantidad[i];
 	i++;
-}while(i<=6);
+}while(i <= opcionesDinero.length - 1);
 ///////////
 //
 //	NOMENCLATURA GENERAL DE VARIABLES:
@@ -68,12 +69,13 @@ function cajero(a){
 function ejecutar(){
 	numero = parseInt(document.getElementById("dinero").value);
 	if(numero <= max){
-		i = 6;
+		i = opcionesDinero.length - 1;
 		do{
 			cajero(i);
 			var resultado = opcionesCantidad2[i] - opcionesCantidad[i];
 			document.getElementById("resultados").innerHTML += "Billetes/monedas de $" + opcionesDinero[i] + ": " + resultado + "<br />";
 			if(numero <= 0){
+				document.getElementById("ocultar").style.display = "inline";				
 				break;
 			}
 			i--;
@@ -83,5 +85,9 @@ function ejecutar(){
 	} else {	
 		document.getElementById("resultados").innerHTML += "ERROR.";
 	}
+}
+
+function borrarContenido(){
+	document.getElementById("resultados").innerHTML = "<strong>Resultados:</strong><br /><br />";
 }
 // Facebook: Aprendamos Ingeniería.
