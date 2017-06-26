@@ -88,6 +88,6 @@ function ejecutar(){
 }
 
 function borrarContenido(){
-	document.getElementById("resultados").innerHTML = "<strong>Resultados:</strong><br /><br />";
+	window.location.reload();
 }
 // Facebook: Aprendamos Ingeniería.
