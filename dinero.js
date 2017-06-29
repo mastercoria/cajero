@@ -1,13 +1,13 @@
 /*
-
-== ALGORITMO DE CAJERO AUTOMÁTICO ==
+==== Código de cajero automático simple: algoritmo base =====
 @author: Christopher Coria Vásquez.
-@version: 0.1.
-@copyright-website: https://www.mastercoria.com/.
-=========================
-
-Este código es libre, puedes modificarlo y distribuirlo a tu antojo.
-Se hizo con amor para la página de Facebook llamada Aprendamos Ingeniería.
+@version: 0.1
+@copyright-website: https://www.mastercoria.com/
+============
+Este código es libre, puedes modificarlo, distribuírlo y hacerte de tus propios cambios.
+Si quieres este código orientado a objetos, visita: https://github.com/mastercoria/cajero-objetos
+===
+Si quieres leer más aportes relacionados a la programación y la tecnología, puedes visitar mi blog: https://blog.mastercoria.com/
 */
 
 // Variables globales.
@@ -82,8 +82,10 @@ function ejecutar(){
 		}while(i >= 0);
 	} else if(numero > max){
 		document.getElementById("resultados").innerHTML += "El número es mayor al máximo disponible: " + max;
+		document.getElementById("ocultar").style.display = "inline";
 	} else {	
 		document.getElementById("resultados").innerHTML += "ERROR.";
+		document.getElementById("ocultar").style.display = "inline";
 	}
 }
 
